@@ -32,9 +32,26 @@ class TitlePageHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('templates/titlepage.html')
         self.response.write(template.render({}))
 
+        user = users.get_current_user()
+        if user:
+            greeting = ('Welcome, %s! (<a href=%s>sign_out</a>)' %
+                (user.nickname(), users.create_logout_url('/')))
+            # entry = jinja_environment.get_template('templates/entry.html')
+            # self.response.write(entry.render())
+        else:
+            greeting=('<a href="%s">Sign in or register</a>.' %
+                users.create_login_url('/'))
+        self.response.write('<html<body>%s</body></html>' % greeting)
+
+
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/homepage.html')
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 65d5edfad8f5763a337c63d767b24ebd7f2bf477
         user = users.get_current_user()
 
         if user:
