@@ -26,13 +26,24 @@ import datetime
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        template = jinja_environment.get_template('templates/homepage.html')
+        user = users.get_current_user()
+
+        if user:
+            logout =  users.create_logout_url('/')
+            self.response.write(template.render({"logout":logout,
+                                                 "user": user,
+                                                }))
+
+        else:
+            return False
+
 
 
 
 class TitlePageHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('titlepage.html')
+        template = jinja_environment.get_template('templates/titlepage.html')
         self.response.write(template.render({}))
 
 
