@@ -61,10 +61,7 @@ jinja_environment = jinja2.Environment(loader =
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
-<<<<<<< HEAD
     ('/', TitlePageHandler),
     ('/homepage', MainHandler),
-=======
-    ('/homepage', MainHandler), ('/', TitlePageHandler)
->>>>>>> 19b0e8c2a46f10626276f70fc23eac69faec27d4
+    ('/', TitlePageHandler)
 ], debug=True)
