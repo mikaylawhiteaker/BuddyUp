@@ -24,6 +24,12 @@ import json
 from google.appengine.ext import ndb
 import datetime
 
+class TitlePageHandler(webapp2.RequestHandler):
+    def get(self):
+
+        template = jinja_environment.get_template('templates/titlepage.html')
+        self.response.write(template.render({}))
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/homepage.html')
@@ -37,15 +43,12 @@ class MainHandler(webapp2.RequestHandler):
                                                 }))
 
         else:
-            return False
+            self.response.write("you are signed out")
 
 
 
 
-class TitlePageHandler(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_environment.get_template('templates/titlepage.html')
-        self.response.write(template.render({}))
+
 
 
 jinja_environment = jinja2.Environment(loader =
