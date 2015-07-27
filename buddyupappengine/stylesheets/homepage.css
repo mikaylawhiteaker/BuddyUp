@@ -1,8 +1,14 @@
 body {
   background-color: #FF0000;
+  font-family: 'Orbitron', sans-serif;
 }
+h1{
+  color: red;
+}
+
 #logo {
   font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #Create {
@@ -17,6 +23,7 @@ body {
   border: 2px solid white;
   border-radius: 100px;
   margin-top: 10%;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #View {
@@ -31,21 +38,26 @@ body {
   border: 2px solid white;
   border-radius: 100px;
   margin-top: 10%;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #logo {
   margin-right: 20%;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #name {
   margin-right: 10%;
   margin-left: 40%;
+  font-family: 'Orbitron', sans-serif;
 }
 
 h1 {
   text-align: center;
+  font-family: 'Orbitron', sans-serif;
 }
 
 #logout_url {
   text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
 }

@@ -36,6 +36,7 @@ class TitlePageHandler(webapp2.RequestHandler):
                                                  "user": user,
                                                 }))
 
+
         else:
             self.response.write("you are signed out")
 
@@ -53,7 +54,10 @@ class MainHandler(webapp2.RequestHandler):
         greeting = users.create_login_url('/titlepage')
         self.response.write(template.render({"greeting":greeting}))
 
-
+class CreateHandler(webapp2.RequestHandler):
+    def post(self):
+        template = jinja_environment.get_template('templates/createform.html')
+        self.response.write(template.render({}))
 
 
 
@@ -62,5 +66,9 @@ jinja_environment = jinja2.Environment(loader =
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler), ('/titlepage', TitlePageHandler)
+    ('/', MainHandler),
+    ('/titlepage', TitlePageHandler),
+    ('/create', CreateHandler),
+
+
 ], debug=True)
