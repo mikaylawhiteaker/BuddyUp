@@ -52,7 +52,8 @@ class MainHandler(webapp2.RequestHandler):
                                                 }))
 
         else:
-            self.response.write("you are signed out")
+            template = jinja_environment.get_template('templates/titlepage.html')
+            self.response.write(template.render({}))
 
 
 
@@ -64,5 +65,5 @@ jinja_environment = jinja2.Environment(loader =
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler), ('/titlepage', TitlePageHandler)
+    ('/homepage', MainHandler), ('/', TitlePageHandler)
 ], debug=True)
