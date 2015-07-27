@@ -1,9 +1,6 @@
-$('#Create').hover(
-  // Mouse Over
-  function(){
-    $(this).animate({width: 75,height: 75}, 1000);
-  },
-  // Mouse Out
-  function(){
-      $(this).animate({width: 50,height: 50}, 1000);
-});
+$('#Create').on("mouseover", function() {
+           $(this).animate({height: '+=20px'},500);
+   });
+$('#Create').on("mouseout", function() {
+           $(this).animate({height: '-=20px'},500);
+   });
