@@ -36,9 +36,7 @@ class TitlePageHandler(webapp2.RequestHandler):
                                                  "user": user,
                                                 }))
 
-        else:
-            template = jinja_environment.get_template('templates/titlepage.html')
-            self.response.write(template.render({}))
+        
 
 
 
@@ -61,5 +59,5 @@ jinja_environment = jinja2.Environment(loader =
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
-    ('/homepage', MainHandler), ('/', TitlePageHandler)
+    ('/', MainHandler), ('/titlepage', TitlePageHandler)
 ], debug=True)
