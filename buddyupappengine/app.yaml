@@ -17,6 +17,10 @@ handlers:
 
 - url: /templates
   static_dir: templates
+<<<<<<< HEAD
+=======
+
+>>>>>>> 616e22cf9a70c086f653d59f6d30e70b1f1e187e
 
 - url: .*
   script: main.app
