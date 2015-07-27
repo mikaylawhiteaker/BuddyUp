@@ -15,7 +15,8 @@ handlers:
 - url: /stylesheets
   static_dir: stylesheets
 
-
+- url: /templates
+  static_dir: templates
 
 - url: .*
   script: main.app
