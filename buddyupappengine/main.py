@@ -68,7 +68,7 @@ jinja_environment = jinja2.Environment(loader =
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/titlepage', TitlePageHandler),
-    ('/create', CreateHandler),
+    ('/create', CreateHandler)
 
 
 ], debug=True)
