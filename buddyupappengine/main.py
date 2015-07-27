@@ -36,12 +36,10 @@ class TitlePageHandler(webapp2.RequestHandler):
                                                  "user": user,
                                                 }))
 
-<<<<<<< HEAD
-        
-=======
+
         else:
             self.response.write("you are signed out")
->>>>>>> 36f77c2fee45ef29b4bb8e226bad39494d5b8802
+
 
 
 
