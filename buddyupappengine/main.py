@@ -24,7 +24,7 @@ import json
 from google.appengine.ext import ndb
 import datetime
 
-class TitlePageHandler(webapp2.RequestHandler):
+class HomePageHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('homepage.html')
 
@@ -51,7 +51,7 @@ class MainHandler(webapp2.RequestHandler):
 
         user = users.get_current_user()
 
-        greeting = users.create_login_url('/titlepage')
+        greeting = users.create_login_url('/homepage')
         self.response.write(template.render({"greeting":greeting}))
 
 class CreateHandler(webapp2.RequestHandler):
@@ -62,13 +62,16 @@ class CreateHandler(webapp2.RequestHandler):
 
 
 
+
+
 jinja_environment = jinja2.Environment(loader =
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/titlepage', TitlePageHandler),
+    ('/homepage', HomePageHandler),
     ('/create', CreateHandler),
+
 
 
 ], debug=True)
