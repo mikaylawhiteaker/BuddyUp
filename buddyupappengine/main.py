@@ -26,7 +26,18 @@ import datetime
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        template = jinja_environment.get_template('templates/homepage.html')
+        user = users.get_current_user()
+
+        if user:
+            logout =  users.create_logout_url('/')
+            self.response.write(template.render({"logout":logout,
+                                                 "user": user,
+                                                }))
+
+        else:
+            return False
+
 
 jinja_environment = jinja2.Environment(loader =
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
