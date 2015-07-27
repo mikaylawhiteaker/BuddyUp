@@ -51,7 +51,7 @@ class MainHandler(webapp2.RequestHandler):
 
         user = users.get_current_user()
 
-        greeting = users.create_login_url('/homepage.html')
+        greeting = users.create_login_url('/homepage')
         self.response.write(template.render({"greeting":greeting}))
 
 class CreateHandler(webapp2.RequestHandler):
