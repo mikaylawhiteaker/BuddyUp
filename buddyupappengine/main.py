@@ -55,7 +55,7 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(template.render({"greeting":greeting}))
 
 class CreateHandler(webapp2.RequestHandler):
-    def post(self):
+    def get(self):
         template = jinja_environment.get_template('templates/createform.html')
         self.response.write(template.render({}))
 

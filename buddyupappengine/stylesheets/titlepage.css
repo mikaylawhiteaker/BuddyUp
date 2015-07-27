@@ -4,9 +4,9 @@ body {
   background-color: #FF0000;
 }
 
-section{
+#main{
   margin-top: 20%;
-  margin-bottom: 25%;
+  margin-bottom: 20%;
   display: block;
   text-align: center;
 
@@ -32,4 +32,9 @@ h1{
   border: 2px solid white;
   border-radius: 100px;
 
+}
+
+#aboutbuddy {
+  padding-top: 50px;
+  text-align: center;
 }
