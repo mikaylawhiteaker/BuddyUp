@@ -8,6 +8,7 @@ section{
   margin-top: 20%;
   margin-bottom: 25%;
   display: block;
+  text-align: center;
 
 }
 
@@ -15,6 +16,9 @@ h1{
   text-align: center;
   font-size: 7em;
   font-family: monospace;
+  margin-bottom: -18px;
+
+
 }
 #Signin{
   color: white;
