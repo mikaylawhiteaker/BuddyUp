@@ -45,3 +45,7 @@ body {
 h1 {
   text-align: center;
 }
+
+#logout_url {
+  text-decoration: none;
+}
