@@ -26,21 +26,6 @@ import datetime
 
 class TitlePageHandler(webapp2.RequestHandler):
     def get(self):
-
-
-
-        template = jinja_environment.get_template('templates/titlepage.html')
-
-
-        user = users.get_current_user()
-
-        greeting = users.create_login_url('/')
-        self.response.write(template.render({"greeting":greeting}))
-
-
-
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
         template = jinja_environment.get_template('templates/homepage.html')
 
         user = users.get_current_user()
@@ -56,6 +41,17 @@ class MainHandler(webapp2.RequestHandler):
             self.response.write(template.render({}))
 
 
+
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+
+        template = jinja_environment.get_template('templates/titlepage.html')
+
+
+        user = users.get_current_user()
+
+        greeting = users.create_login_url('/titlepage')
+        self.response.write(template.render({"greeting":greeting}))
 
 
 
