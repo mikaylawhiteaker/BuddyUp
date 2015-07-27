@@ -1,3 +1,51 @@
 h1{
   color: red;
 }
+#logo {
+  font-weight: bold;
+}
+
+#Create {
+  color: white;
+  text-decoration: none;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+  font-size: 3em;
+  font-family: monospace;
+  display: block;
+  border: 2px solid white;
+  border-radius: 100px;
+  margin-top: 10%;
+}
+
+#View {
+  color: white;
+  text-decoration: none;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+  font-size: 3em;
+  font-family: monospace;
+  display: block;
+  border: 2px solid white;
+  border-radius: 100px;
+  margin-top: 10%;
+}
+
+#logo {
+  margin-right: 20%;
+}
+
+#name {
+  margin-right: 10%;
+  margin-left: 40%;
+}
+
+h1 {
+  text-align: center;
+}
+
+#logout_url {
+  text-decoration: none;
+}
