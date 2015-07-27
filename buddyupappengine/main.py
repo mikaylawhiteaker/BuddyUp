@@ -15,10 +15,21 @@
 # limitations under the License.
 #
 import webapp2
+import logging
+import jinja2
+import os
+from google.appengine.api import users
+import urllib2
+import json
+from google.appengine.ext import ndb
+import datetime
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
+
+jinja_environment = jinja2.Environment(loader =
+    jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
