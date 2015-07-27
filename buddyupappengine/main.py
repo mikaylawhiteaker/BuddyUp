@@ -40,9 +40,17 @@ class MainHandler(webapp2.RequestHandler):
             return False
 
 
+
+
+class TitlePageHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('templates/titlepage.html')
+        self.response.write(template.render({}))
+
+
 jinja_environment = jinja2.Environment(loader =
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/', MainHandler), ('/titlepage', TitlePageHandler)
 ], debug=True)
