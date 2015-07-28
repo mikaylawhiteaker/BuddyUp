@@ -1,69 +1,18 @@
-
 form    {
 background-color: #FF0000;
-margin-left: 30%;
-margin-right: 30%;
+margin-left: 35%;
+margin-right: 35%;
 display: block;
 margin-top: 10%;
 margin-bottom: 10%;
 position: fixed;
-font-family: Times, Geneva, sans-serif;
+font-family: Orbitron, Geneva, sans-serif;
 font-size: 1em;
-}
-#word {
-  font-style: italic;
-  font-family: 'Orbitron', sans-serif;
-}
-
-body {
-  font-family: 'Orbitron', sans-serif;
-  background-repeat: no-repeat;
-  background-image: url("https://c1.staticflickr.com/9/8426/7717053328_2133a0c0d3_z.jpg");
-  background-size: cover;
-  text-align: center;
-}
-
-#time {
-  font-family: 'Orbitron', sans-serif;
-}
-
-#date {
-  font-family: 'Orbitron', sans-serif;
-}
-
-#place {
-  font-family: 'Orbitron', sans-serif;
-}
-
-#other {
-  font-family: 'Orbitron', sans-serif;
-}
-
-#button {
-  font-family: 'Orbitron', sans-serif;
-  margin-top: 1%;
-}
-
-form   {
-background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
-margin:auto;
-position: static;
-width:55%;
-height:80%;
-font-family: Tahoma, Geneva, sans-serif;
-font-size: 14px;
-font-style: italic;
-line-height: 24px;
-font-weight: bold;
-color: #09;
+padding: 20px;
 border-radius: 30px;
-padding:5%;
-border: 1px solid #999;
-border: inset 1px solid black;
-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-
 }
+
+
 
 
 input    {
@@ -72,28 +21,9 @@ display:block;
 border: 1px solid #999;
 height: 25px;
 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+
 }
 
-
-
-input.button {
-width:100px;
-position:absolute;
-right:20px;
-bottom:20px;
-background:#09C;
-color:#fff;
-font-family: Tahoma, Geneva, sans-serif;
-height:30px;
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
-border: 1px solid #999;
-}
-input.button:hover {
-background:#fff;
-color:#09C;
-}
 
 
 
