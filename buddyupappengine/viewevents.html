@@ -14,6 +14,9 @@
     <div class="comments">
       <p>Buddy Requests</p>
       {% for request in data %}
+        {%if loop.index < 8%}
+        <section class="showevents">
+
         <p> {{request.activity}}: </p>
         <p>{{request.time}}, {{request.date}}</p>
         <p>{{request.place}}</p>
