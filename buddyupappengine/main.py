@@ -74,7 +74,7 @@ class CreateHandler(webapp2.RequestHandler):
         # date = datetime.datetime.fromtimestamp(date_js/1000)
 
         date = str(date_js)
-        logging.info(type(date_js))
+
 
 
         buddyRequest_object = buddyRequest(activity = self.request.get("activity"),
@@ -95,7 +95,7 @@ class ViewHandler(webapp2.RequestHandler):
     def get(self):
         query = buddyRequest.query()
         data = query.fetch()
-
+        logging.info(data[0].key.id())
 
 
         template = jinja_environment.get_template('viewevents.html')
