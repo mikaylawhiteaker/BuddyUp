@@ -66,7 +66,15 @@ class buddyRequest(ndb.Model):
 class CreateHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/createform.html')
-        self.response.write(template.render({}))
+        user = users.get_current_user()
+        if user:
+            logout =  users.create_logout_url('/')
+            self.response.write(template.render({"logout":logout,
+                                                 "user": user,
+                                                }))
+
+        else:
+            self.response.write("you are signed out")
 
 
     def post(self):
@@ -82,7 +90,7 @@ class CreateHandler(webapp2.RequestHandler):
                                            date = date,
                                            place = self.request.get("place"),
                                            other = self.request.get("other"),
-                                           buddies = ['mikayla', 'sonia']
+                                           buddies = ['mikayla', 'sonia'],
                                            )
         buddyRequest_object.put()
 
@@ -93,6 +101,7 @@ class CreateHandler(webapp2.RequestHandler):
 
 class ViewHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
         query = buddyRequest.query()
         data = query.fetch()
         logging.info(data[0].key.id())
@@ -100,14 +109,21 @@ class ViewHandler(webapp2.RequestHandler):
 
         template = jinja_environment.get_template('viewevents.html')
         self.response.write(template.render({'data':data,
+                                            'user':user.nickname()
 
                                             }))
 
 
 class AddyouselfHandler(webapp2.RequestHandler):
     def get(self):
+        requestid = int(self.request.get('requestid'))
+        buddy_request = buddyRequest.get_by_id(requestid, parent=None)
+        buddy_request.buddies.append(self.request.get('fname'))
+        buddy_request.put()
         template = jinja_environment.get_template('addpage.html')
-        self.response.write(template.render({}))
+        self.response.write(template.render({"requestid":requestid,
+
+                                            }))
 
 
 
