@@ -4,35 +4,35 @@ body {
 }
 
 
-
-
 h1 {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
   color: red;
   font-size: 80px;
-  margin-bottom: -8%;
-}
-
-form    {
-background-color: #FF0000;
-display: block;
-position: absolute;
-margin-top: 10%;
-margin-bottom: 10%;
-margin-left: 34%;
-margin-right: 34%;
-font-family: Orbitron;
-font-size: 1em;
-padding: 30px;
-border-radius: 30px;
+  margin-bottom: -6%;
 }
 
 
+div.form
+{
+    display: block;
+    text-align: center;
+}
+form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    background-color: #FF0000;
 
-
-
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-family: Orbitron;
+    font-size: 1em;
+    padding: 30px;
+    border-radius: 30px;
+}
 
 
 input    {
