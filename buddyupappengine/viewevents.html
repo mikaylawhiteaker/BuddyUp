@@ -19,6 +19,7 @@
       <p>Buddy Requests</p>
       {% for request in data %}
         {%if loop.index < 5%}
+        <section class="showevents">
         <p> {{request.activity}}: </p>
         <input class="events" type="submit" value="Post">
         <p>{{request.time}}, {{request.date}}</p>
@@ -26,6 +27,7 @@
         <p>{{request.other}}</p>
 
       </br>
+    </section>
         {%endif%}
       {%endfor%}
 
