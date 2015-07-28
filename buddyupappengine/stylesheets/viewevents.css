@@ -1,4 +1,4 @@
-/*#logo {
+#logo {
   margin-right: 20%;
   font-family: 'Orbitron', sans-serif;
 }
@@ -12,7 +12,9 @@
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
 }
-*/
+
+
+
 
 h1 {
   text-align: center;
@@ -33,7 +35,8 @@ body {
   font-size: 1.2em;
   padding-right: 23%;
   padding-left: 23%;
-  font-weight: bold;
+  font-weight: 900;
+
 }
 
 .events {
@@ -49,9 +52,10 @@ p {
 
 
 .showevents {
-  border: 15px white;
-  border-top: 6px solid black;
-  border-bottom: 6px  solid black;
+
+  border-top: 7px solid black;
+  border-bottom: 7px  solid black;
+  border-radius: 90px;
   padding: 40px;
   margin-top: 60px;
 }
@@ -62,6 +66,7 @@ p {
 	height:130px;
 	padding:10px;
 	text-align:center;
+  text-decoration: none;
 	color: #444;
 	position:fixed;
 	top:75px;
@@ -75,4 +80,5 @@ p {
   padding-top: 50px;
   text-align: center;
   font-family: Times;
+  font-size: 0.8em;
 }
