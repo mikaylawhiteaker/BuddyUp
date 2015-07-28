@@ -1,0 +1,43 @@
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-repeat: no-repeat;
+  background-image: url("http://www.planwallpaper.com/static/images/bicycle-1280x720.jpg");
+  background-size: cover;
+  text-align: center;
+  color: #0066FF;
+}
+
+h1 {
+  color: #0066FF;
+}
+
+#firstnamebox {
+  margin-right: 2%;
+  width: 150px;
+  height: 15px;
+}
+
+#lastnamebox {
+  width: 150px;
+  height: 15px;
+}
+
+#submitbutton {
+  width: 250px;
+}
+
+.box {
+  color: white;
+  text-decoration: none;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+  font-size: 3em;
+  font-family: monospace;
+  display: block;
+  border: 2px solid red;
+  border-radius: 200px;
+  margin-top: 10%;
+  font-family: 'Orbitron', sans-serif;
+  color: #0066FF;
+}

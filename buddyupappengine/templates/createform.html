@@ -2,33 +2,37 @@
 <html>
 <head>
   <title>Buddy Up!-Create</title>
-  <link href='http://fonts.googleapis.com/css?family=Orbitron:400,900,700,500' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Orbitron:400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="stylesheets/createform.css">
 </head>
 <body>
-<h1>Buddy Up!</h1>
-
+  <nav>
+    <span id="logo"><a href='/homepage'>Buddy Up</a></span>
+    <span id="name">User: {{user}}</span>
+    <a id="logout_url" href="{{logout}}" action = "/titlepage">Sign Out</a>
+  </nav>
+  <h1>Buddy Up!</h1>
 <div class="form">
- <form action = "/create" method="post">
-<h2>New Event :</h2>
+  <form action = "/create" method="post">
+    <h2>New Event :</h2>
 <label>
-Activity<input type="text" name="activity" required/>
+  Activity<input type="text" name="activity" required/>
+</label>
+  </br>
+<label>
+  Time<input type="time" name="time" required />
+</label>
+  </br>
+<label>
+  <span>Date</span><input type="date" name="date" required />
 </label>
 </br>
 <label>
-Time<input type="time" name="time" required />
+  Place<input type="text" name="place" required />
 </label>
 </br>
 <label>
-<span>Date</span><input type="date" name="date" required />
-</label>
-</br>
-<label>
-Place<input type="text" name="place" required />
-</label>
-</br>
-<label>
-Other<input type="text" name="other" />
+  Other<input type="text" name="other" />
 </br>
 <button type="submit">Create</button>
 

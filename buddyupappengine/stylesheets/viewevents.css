@@ -1,6 +1,22 @@
+#logo {
+  margin-right: 20%;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#name {
+  margin-right: 10%;
+  margin-left: 35%;
+  font-family: 'Orbitron', sans-serif;
+}
+#logout_url {
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+}
+
 h1 {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
+  font-size: 4em;
 }
 
 h3 {
@@ -9,15 +25,22 @@ h3 {
 }
 
 body {
-  background-color: red;
+  background: url("http://thecustomizewindows.com/wp-content/uploads/2012/01/Colorful-Android-Club.jpg")no-repeat fixed center;
+  background-size: cover;
   font-family: 'Orbitron', sans-serif;
+  color: #D41923;
+  font-size: 1.2em;
+  padding-right: 23%;
+  padding-left: 23%;
+  font-weight: 900;
+
 }
 
 .events {
   position: absolute;
   right: 400px;
   width: 300px;
-  margin-top: 5%;
+  margin-top: 9%;
 }
 
 p {
@@ -26,10 +49,12 @@ p {
 
 
 .showevents {
-  border: 5px solid black;
-  padding: 20px;
-  margin-top: 20px;
 
+  border-top: 7px solid black;
+  border-bottom: 7px  solid black;
+  border-radius: 90px;
+  padding: 40px;
+  margin-top: 60px;
 }
 
 
@@ -38,6 +63,7 @@ p {
 	height:130px;
 	padding:10px;
 	text-align:center;
+  text-decoration: none;
 	color: #444;
 	position:fixed;
 	top:75px;
@@ -46,8 +72,10 @@ p {
 }
 
 
+
 #aboutbuddy {
   padding-top: 50px;
   text-align: center;
   font-family: Times;
+  font-size: 0.8em;
 }

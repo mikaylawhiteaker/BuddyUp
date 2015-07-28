@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Buddy Up!</title>
-  <link href='http://fonts.googleapis.com/css?family=Orbitron:400,900,700,500' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Orbitron:400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="stylesheets/viewevents.css">
 
   <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -10,12 +10,22 @@
 </head>
 <body>
 
+
+  <nav>
+    <a href="/homepage" class ="button">Back</a>
+    <span id="name">User: {{user}}</span>
+    <a id="logout_url" href="{{logout}}" action = "/titlepage">Sign Out</a>
+  </nav>
+
+
+
   <h1>Buddy Up!</h1>
 
   <h3>View Events</h3>
+
   <h3>View Buddy Requests</h3>
       <p>Buddy Requests</p>
-      {% for request in user_requests %}
+      {% for request in data %}
         <section class="showevents">
         <p> {{request.activity}}: </p>
         <p>{{request.time}}, {{request.date}}</p>

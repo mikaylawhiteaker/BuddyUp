@@ -6,20 +6,15 @@ body {
 }
 
 nav {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 h1{
   color: red;
 }
 
-#logo {
-  font-weight: bold;
-  font-family: 'Orbitron', sans-serif;
-}
-
 #Create {
-  color: white;
+  color: black;
   text-decoration: none;
   margin-left: 25%;
   margin-right: 25%;
@@ -27,14 +22,14 @@ h1{
   font-size: 3em;
   font-family: monospace;
   display: block;
-  border: 2px solid white;
+  border: 2px solid black;
   border-radius: 100px;
   margin-top: 10%;
   font-family: 'Orbitron', sans-serif;
 }
 
 #View {
-  color: white;
+  color: black;
   text-decoration: none;
   margin-left: 25%;
   margin-right: 25%;
@@ -42,7 +37,7 @@ h1{
   font-size: 3em;
   font-family: monospace;
   display: block;
-  border: 2px solid white;
+  border: 2px solid black;
   border-radius: 100px;
   margin-top: 5%;
   font-family: 'Orbitron', sans-serif;
@@ -50,13 +45,20 @@ h1{
 
 #logo {
   margin-right: 20%;
+  font-weight: bold;
   font-family: 'Orbitron', sans-serif;
 }
 
 #name {
-  margin-right: 10%;
-  margin-left: 35%;
+  margin-left: 55%;
   font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+}
+
+#logout_url {
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  margin-left: 2%;
 }
 
 h1 {
@@ -67,7 +69,7 @@ h1 {
   font-size: 70px;
 }
 
-#logout_url {
+a {
   text-decoration: none;
-  font-family: 'Orbitron', sans-serif;
+  color: black;
 }
