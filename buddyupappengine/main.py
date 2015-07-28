@@ -54,8 +54,8 @@ class MainHandler(webapp2.RequestHandler):
 
 class buddyRequest(ndb.Model):
     activity = ndb.StringProperty()
-    time = ndb.TimeProperty()
-    date = ndb.DateProperty()
+    time = ndb.StringProperty()
+    date = ndb.StringProperty()
     place = ndb.StringProperty()
     other = ndb.StringProperty()
 
@@ -69,8 +69,8 @@ class CreateHandler(webapp2.RequestHandler):
 
     def post(self):
         date_js = self.request.get("date")
+        date = str(date_js)
         logging.info(type(date_js))
-        date = datetime.datetime.fromtimestamp(date_js/1000)
         buddyRequest_object = buddyRequest(activity = self.request.get("activity"),
                                            time = self.request.get("time"),
                                            date = date,
@@ -78,6 +78,14 @@ class CreateHandler(webapp2.RequestHandler):
                                            other = self.request.get("other"),
                                            )
         buddyRequest_object.put()
+        template = jinja_environment.get_template('viewevents.html')
+        self.response.write(template.render({}))
+
+
+class ViewHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('viewevents.html')
+        self.response.write(template.render({}))
 
 
 
