@@ -1,4 +1,4 @@
-application: buddyup-1020 
+application: buddyup-1020
 version: 1
 runtime: python27
 api_version: 1
@@ -15,6 +15,8 @@ handlers:
 - url: /stylesheets
   static_dir: stylesheets
 
+- url: /JavaScript
+  static_dir: JavaScript
 
 - url: .*
   script: main.app

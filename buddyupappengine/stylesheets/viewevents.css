@@ -32,6 +32,20 @@ p {
 
 }
 
+
+.scrollToTop{
+	width:100px;
+	height:130px;
+	padding:10px;
+	text-align:center;
+	color: #444;
+	position:fixed;
+	top:75px;
+	right:1px;
+	background: url('http://png-2.findicons.com/files/icons/2338/reflection/128/arrow_up_1.png') no-repeat 0px 10px;
+}
+
+
 #aboutbuddy {
   padding-top: 50px;
   text-align: center;
