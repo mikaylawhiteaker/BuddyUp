@@ -82,7 +82,7 @@ class CreateHandler(webapp2.RequestHandler):
                                            date = date,
                                            place = self.request.get("place"),
                                            other = self.request.get("other"),
-                                           buddies = ['mikayla', 'sonia']
+                                           buddies = ['mikayla', 'sonia'],
                                            )
         buddyRequest_object.put()
 
@@ -106,8 +106,14 @@ class ViewHandler(webapp2.RequestHandler):
 
 class AddyouselfHandler(webapp2.RequestHandler):
     def get(self):
+        requestid = int(self.request.get('requestid'))
+        buddy_request = buddyRequest.get_by_id(requestid, parent=None)
+        buddy_request.buddies.append(self.request.get('fname'))
+        buddy_request.put()
         template = jinja_environment.get_template('addpage.html')
-        self.response.write(template.render({}))
+        self.response.write(template.render({"requestid":requestid,
+
+                                            }))
 
 
 

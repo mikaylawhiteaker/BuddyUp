@@ -15,7 +15,7 @@
   <h3>View Events</h3>
   <h3>View Buddy Requests</h3>
       <p>Buddy Requests</p>
-      {% for request in data %}
+      {% for request in user_requests %}
         <section class="showevents">
         <p> {{request.activity}}: </p>
         <p>{{request.time}}, {{request.date}}</p>
