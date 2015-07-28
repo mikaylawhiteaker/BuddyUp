@@ -1,6 +1,15 @@
 body {
-  background: url("http://www.planwallpaper.com/static/images/bicycle-1280x720.jpg") no-repeat fixed center;
+  background: url("http://www.desktopaper.com/wp-content/uploads/amazing-mac-os-wallpaper.jpg") no-repeat fixed center;
   background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 70px;
+  margin-bottom: -6%;
 }
 
 form    {
