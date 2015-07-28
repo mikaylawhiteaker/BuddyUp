@@ -7,7 +7,17 @@
 </head>
 <body>
 
-  welcome to teh view page
+  welcome to the view page
+
+  <div class="comments">
+    <p>Buddy Requests</p>
+    {% for request in data %}
+      {%if loop.index < 5%}
+      <p> {{request}} </p>
+      {%endif%}
+    {%endfor%}
+
+</div>
 
   <!-- the event to be clicked on, followed by a post handler to post onto g+ -->
 
