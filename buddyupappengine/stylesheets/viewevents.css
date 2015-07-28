@@ -12,3 +12,13 @@ body {
   background-color: red;
   font-family: 'Orbitron', sans-serif;
 }
+
+p {
+  margin-left: 4%;
+  float: left;
+}
+
+#button {
+  margin-left: 1%;
+  margin-top: 5%;
+}
