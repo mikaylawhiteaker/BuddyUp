@@ -7,55 +7,30 @@
 </head>
 <body>
 
-
-  <!-- <form action = "/create">
-
-   Activity <input type="text" name="activity">
-=======
-
-  <form action = "/create" method="post">
-
-
-   <span id="word">Activity</span> <input type="text">
-
-
-   Activity <input type="text" name="activity">
-
->>>>>>> 3b478f6e96252fbb4c623c4c2e4cb676ba4693c1
-   </br>
-   Time <input type="time" name="time">
-   </br>
-   Date <input type="date" name="date">
-   </br>
-   Place <input type="text" name="place">
-   </br>
-   other <input type="text" name="other">
-   </br>
-   <button type="submit">Create</button>
- </form> -->
-
- <form action = "/create">
+ <form action = "/create" method="post">
 <div>
 <h1>New Event :</h1>
 <label>
 Activity<input type="text" name="activity" />
 </label>
-
+</br>
 <label>
 Time<input type="time" name="time" />
 </label>
-
+</br>
 <label>
-Date<input type="text" name="date" />
+<span>Date</span><input type="date" name="date" />
 </label>
-
+</br>
 <label>
 Place<input type="text" name="place" />
 </label>
-
+</br>
 <label>
 Other<input type="text" name="other" />
+</br>
 <button type="submit">Create</button>
+<button type ="submit">Cancel</button>
 </label>
 
 </div>
