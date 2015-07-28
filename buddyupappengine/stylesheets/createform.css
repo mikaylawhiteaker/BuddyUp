@@ -1,18 +1,21 @@
-form    {
-background-color: #FF0000;
-margin-left: 35%;
-margin-right: 35%;
-display: block;
-margin-top: 10%;
-margin-bottom: 10%;
-position:absolute;
-font-family: Orbitron;
-font-size: 1em;
-padding: 20px;
-border-radius: 30px;
+body {
+  background: url("http://www.planwallpaper.com/static/images/bicycle-1280x720.jpg") no-repeat fixed center;
+  background-size: cover;
 }
 
-
+form    {
+background-color: #FF0000;
+display: block;
+position: absolute;
+margin-left: 35%;
+margin-right: 35%;
+margin-top: 10%;
+margin-bottom: 10%;
+font-family: Orbitron;
+font-size: 1em;
+padding: 30px;
+border-radius: 30px;
+}
 
 
 input    {
@@ -21,14 +24,11 @@ display:block;
 border: 1px solid #999;
 height: 25px;
 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-
 }
 
 
 
 
-body {
-
-  background: url("http://www.planwallpaper.com/static/images/bicycle-1280x720.jpg");
-  background-size: cover;
+.button {
+  padding-left: 67%;
 }
