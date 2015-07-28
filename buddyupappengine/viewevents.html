@@ -14,7 +14,7 @@
     <div class="comments">
       <p>Buddy Requests</p>
       {% for request in data %}
-        {%if loop.index < 8%}
+
         <section class="showevents">
 
         <p> {{request.activity}}: </p>
@@ -29,7 +29,9 @@
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <div class="g-plus" data-action="share" data-width="400" data-height="24" data-href = '{{eventurl}}'></div>
        </br>
+     </section>
       {%endfor%}
+
   </div>
 
   <section id="aboutbuddy">
