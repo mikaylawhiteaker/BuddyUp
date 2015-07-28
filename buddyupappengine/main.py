@@ -53,11 +53,13 @@ class MainHandler(webapp2.RequestHandler):
 
 
 class buddyRequest(ndb.Model):
-    activity = ndb.StringProperty(required =True)
-    time = ndb.StringProperty(required =True)
-    date = ndb.StringProperty(required =True)
-    place = ndb.StringProperty(required =True)
+    activity = ndb.StringProperty(required=True)
+    time = ndb.StringProperty(required=True)
+    date = ndb.StringProperty(required=True)
+    place = ndb.StringProperty(required=True)
     other = ndb.StringProperty()
+    buddies = ndb.StringProperty(repeated=True)
+
 
 
 
@@ -73,13 +75,14 @@ class CreateHandler(webapp2.RequestHandler):
 
         date = str(date_js)
         logging.info(type(date_js))
-        
+
 
         buddyRequest_object = buddyRequest(activity = self.request.get("activity"),
                                            time = self.request.get("time"),
                                            date = date,
                                            place = self.request.get("place"),
                                            other = self.request.get("other"),
+                                           buddies = ['mikayla', 'sonia']
                                            )
         buddyRequest_object.put()
 
@@ -92,11 +95,19 @@ class ViewHandler(webapp2.RequestHandler):
     def get(self):
         query = buddyRequest.query()
         data = query.fetch()
+
+        eventurl = ""
+
+
         template = jinja_environment.get_template('viewevents.html')
-        self.response.write(template.render({'data':data}))
+        self.response.write(template.render({'data':data,
+
+                                            }))
 
 
-
+class AddyouselfHandler(webapp2.RequestHandler):
+    def get(self):
+        return True
 
 
 
@@ -112,7 +123,8 @@ app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/homepage', HomePageHandler),
     ('/create', CreateHandler),
-    ('/view', ViewHandler)
+    ('/view', ViewHandler),
+    ('/add', AddyouselfHandler)
 
 
 
