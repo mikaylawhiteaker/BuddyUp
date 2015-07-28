@@ -65,10 +65,7 @@ class CreateHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/createform.html')
         self.response.write(template.render({}))
-<<<<<<< HEAD
 
-=======
->>>>>>> 18f3dfa96d22eef3d8333e879d93de77086522ec
 
     def post(self):
         date_js = self.request.get("date")
