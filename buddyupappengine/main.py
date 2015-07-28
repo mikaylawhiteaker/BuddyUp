@@ -65,12 +65,11 @@ class CreateHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/createform.html')
         self.response.write(template.render({}))
-<<<<<<< HEAD
-    
-=======
+
 
     def post(self):
         date_js = self.request.get("date")
+        logging.info(type(date_js))
         date = datetime.datetime.fromtimestamp(date_js/1000)
         buddyRequest_object = buddyRequest(activity = self.request.get("activity"),
                                            time = self.request.get("time"),
@@ -83,7 +82,7 @@ class CreateHandler(webapp2.RequestHandler):
 
 
 
->>>>>>> 3b478f6e96252fbb4c623c4c2e4cb676ba4693c1
+
 
 
 
