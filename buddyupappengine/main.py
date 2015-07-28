@@ -107,8 +107,8 @@ class ViewHandler(webapp2.RequestHandler):
 
 class AddyouselfHandler(webapp2.RequestHandler):
     def get(self):
-        return True
-
+        template = jinja_environment.get_template('addpage.html')
+        self.response.write(template.render({}))
 
 
 
