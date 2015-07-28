@@ -69,8 +69,11 @@ class CreateHandler(webapp2.RequestHandler):
 
     def post(self):
         date_js = self.request.get("date")
+        # date = datetime.datetime.fromtimestamp(date_js/1000)
+
         date = str(date_js)
         logging.info(type(date_js))
+
         buddyRequest_object = buddyRequest(activity = self.request.get("activity"),
                                            time = self.request.get("time"),
                                            date = date,
