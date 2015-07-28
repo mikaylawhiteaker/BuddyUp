@@ -16,17 +16,20 @@
       {% for request in data %}
         {%if loop.index < 8%}
         <section class="showevents">
+
         <p> {{request.activity}}: </p>
-        <input class="events" type="submit" value="Post">
         <p>{{request.time}}, {{request.date}}</p>
         <p>{{request.place}}</p>
         <p>{{request.other}}</p>
-
-      </br>
-    </section>
-        {%endif%}
+        <p>buddies:</p>
+        {%for name in request.buddies%}
+          {{name}},
+        {%endfor%}
+        </br>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <div class="g-plus" data-action="share" data-width="400" data-height="24" data-href = '{{eventurl}}'></div>
+       </br>
       {%endfor%}
-
   </div>
 
   <section id="aboutbuddy">
