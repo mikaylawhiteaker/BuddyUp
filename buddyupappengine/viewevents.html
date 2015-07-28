@@ -27,7 +27,11 @@
         {%endfor%}
         </br>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <div class="g-plus" data-action="share" data-width="400" data-height="24" data-href = '{{eventurl}}'></div>
+        <div class="g-plus"
+             data-action="share"
+             data-width="400"
+             data-height="24"
+             data-href = "https://buddyup-1020.appspot.com/add?requestid="+request.id()></div>
        </br>
      </section>
       {%endfor%}
