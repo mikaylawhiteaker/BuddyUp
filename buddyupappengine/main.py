@@ -96,7 +96,7 @@ class ViewHandler(webapp2.RequestHandler):
         query = buddyRequest.query()
         data = query.fetch()
 
-        eventurl = ""
+        eventurl = "https://buddyup-1020.appspot.com/add?requestid="
 
 
         template = jinja_environment.get_template('viewevents.html')
