@@ -4,11 +4,11 @@ body {
   background-image: url("http://www.planwallpaper.com/static/images/bicycle-1280x720.jpg");
   background-size: cover;
   text-align: center;
-  color: red;
+  color: #0066FF;
 }
 
 h1 {
-  color: red;
+  color: #0066FF;
 }
 
 #firstnamebox {
@@ -39,5 +39,5 @@ h1 {
   border-radius: 200px;
   margin-top: 10%;
   font-family: 'Orbitron', sans-serif;
-  color: red;
+  color: #0066FF;
 }
