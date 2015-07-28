@@ -53,11 +53,12 @@ p {
 
 .showevents {
 
-  border-top: 7px solid black;
-  border-bottom: 7px  solid black;
+  border-top: 6px solid black;
+  border-bottom: 6px  solid black;
   border-radius: 90px;
   padding: 40px;
   margin-top: 60px;
+  font-size: 1.3em;
 }
 
 
@@ -73,7 +74,6 @@ p {
 	right:1px;
 	background: url('http://png-2.findicons.com/files/icons/2338/reflection/128/arrow_up_1.png') no-repeat 0px 10px;
 }
-
 
 
 #aboutbuddy {
