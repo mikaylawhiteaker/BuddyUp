@@ -30,5 +30,10 @@ p {
   padding: 20px;
   margin-top: 20px;
 
+}
 
+#aboutbuddy {
+  padding-top: 50px;
+  text-align: center;
+  font-family: Times;
 }
