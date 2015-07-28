@@ -36,11 +36,8 @@ class HomePageHandler(webapp2.RequestHandler):
                                                  "user": user,
                                                 }))
 
-
         else:
             self.response.write("you are signed out")
-
-
 
 
 class MainHandler(webapp2.RequestHandler):
@@ -66,10 +63,7 @@ class CreateHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/createform.html')
         self.response.write(template.render({}))
-    def post(self):
-
-
-
+    
 
 
 
