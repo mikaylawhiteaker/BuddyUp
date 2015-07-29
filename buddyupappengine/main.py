@@ -106,7 +106,7 @@ class ViewHandler(webapp2.RequestHandler):
         user = users.get_current_user()
         query = buddyRequest.query()
         data = query.fetch()
-        
+
 
 
         template = jinja_environment.get_template('viewevents.html')
@@ -124,8 +124,17 @@ class AddyouselfHandler(webapp2.RequestHandler):
         buddy_request.put()
         template = jinja_environment.get_template('addpage.html')
         self.response.write(template.render({"requestid":requestid,
-
                                             }))
+
+
+
+
+
+class BuddyAdded(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('buddyadded.html')
+        self.response.write(template.render({}))
+
 
 
 
@@ -141,7 +150,8 @@ app = webapp2.WSGIApplication([
     ('/homepage', HomePageHandler),
     ('/create', CreateHandler),
     ('/view', ViewHandler),
-    ('/add', AddyouselfHandler)
+    ('/add', AddyouselfHandler),
+    ('/buddyadded', BuddyAdded),
 
 
 
