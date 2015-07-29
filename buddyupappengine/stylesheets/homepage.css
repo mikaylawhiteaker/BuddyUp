@@ -14,27 +14,25 @@ a {
 }
 
 #Create {
-  color: white;
   text-decoration: none;
   margin-left: 25%;
   margin-right: 25%;
   text-align: center;
-  font-size: 7em;
+  font-size: 6em;
   font-family: monospace;
   display: block;
   border: 2px solid white;
   border-radius: 300px;
   margin-top: 10%;
   font-family: 'Orbitron', sans-serif;
-  padding-left: 7%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-right: 7%;
+  padding-left: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 4%;
   margin-top: 6%;
 }
 
 #View {
-  color: white;
   text-decoration: none;
   margin-left: 25%;
   margin-right: 25%;
@@ -53,21 +51,31 @@ a {
 }
 
 #logo {
-  margin-right: 20%;
-  font-weight: bold;
+  text-decoration: none;
   font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 17px;
+  position: absolute;
+  padding: 3px;
 }
 
 #name {
-  margin-left: 45%;
+  margin-left: 60%;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
+  color: white;
+  font-size: 17px;
+  position: relative;
 }
 
 #logout_url {
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
-  margin-left: 2%;
+  margin-left: 10%;
+  color: white;
+  font-size: 17px;
+  position: absolute;
 }
 
 

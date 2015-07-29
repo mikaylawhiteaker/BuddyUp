@@ -4,7 +4,7 @@
   <title>Buddy Up!</title>
   <link href='http://fonts.googleapis.com/css?family=Orbitron:400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="stylesheets/viewevents.css">
-<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
   <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src ="JavaScript/viewevents.js"></script>
 </head>
@@ -12,9 +12,10 @@
 
   <div class="top">
   <nav>
-    <a href="/homepage" class ="button">BuddyUp</a>
-    <span id="name">User: {{user}}</span>
-    <a id="logout_url" href='/'>Sign Out</a>
+    <nav>
+      <a href='/homepage'><span id="logo">Buddy Up</a></span>
+      <span id="name">User: {{user}}</span>
+      <a id="logout_url" href='/'>Sign Out</a>
   </nav>
   </div>
 
@@ -35,7 +36,7 @@
         <p>{{request.other}}</p>
         <p>buddies:</p>
         {%for name in request.buddies%}
-          {{name}}
+          {{name}},
         {% endfor %}
         </br>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
