@@ -55,28 +55,33 @@ nav {
 }
 
 #logo {
-  margin-right: 10%;
-  font-weight: bold;
-  font-family: 'Orbitron', sans-serif;
-  color: white;
   text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+
+  font-weight: bold;
+  color: white;
   font-size: 17px;
+  position: absolute;
+  padding: 3px;
 }
 
 #name {
-  margin-left: 55%;
+  margin-left: 60%;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
   color: white;
   font-size: 17px;
+  position: relative;
 }
 
 #logout_url {
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
-  margin-left: 2%;
+  margin-left: 12%;
   color: white;
   font-size: 17px;
+  position: absolute;
+
 }
 
 a {
