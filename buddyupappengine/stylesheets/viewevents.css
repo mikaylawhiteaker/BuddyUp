@@ -53,7 +53,6 @@ h1 {
 
 body {
   background-color: #12CCB9;
-  background-size: cover;
 
   font-family: monospace;
   color: white;
@@ -86,7 +85,7 @@ p {
 }
 
 
-.scrollToTop{
+/*.scrollToTop{
 	width:100px;
 	height:130px;
 	padding:5px;
@@ -98,7 +97,7 @@ p {
 	right:1px;
 	background: url('http://png-2.findicons.com/files/icons/2338/reflection/128/arrow_up_1.png')
   no-repeat 0px 10px;
-}
+}*/
 
 
 #aboutbuddy {
@@ -117,7 +116,7 @@ footer {
   color: white;
 }
 
-p {
+#instructions {
   text-align: center;
   color: white;
   font-size: 1.4em;
