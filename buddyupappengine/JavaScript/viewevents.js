@@ -17,10 +17,12 @@ $(document).ready(function(){
       });
 
 
-      $('#myform').submit(function() {
+      $(this).submit(function(){
           var c = confirm("Are you sure?");
-          return c; //you can just return c because it will be true or false
+          return c;
       });
+
+
 
 
 });
