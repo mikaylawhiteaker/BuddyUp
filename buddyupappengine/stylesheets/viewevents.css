@@ -121,3 +121,9 @@ footer {
   color: white;
   font-size: 1.4em;
 }
+
+#activity {
+  text-align: center;
+  font-size: 1.7em;
+  color: black;
+}

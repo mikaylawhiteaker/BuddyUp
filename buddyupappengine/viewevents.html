@@ -30,7 +30,7 @@
       {% for request in data %}
         {% if request.creator == user %}
         <section class="showevents">
-        <p> {{request.activity}}: </p>
+        <div id="activity"> {{request.activity}}: </div>
         <p>{{request.time}}, {{request.date}}</p>
         <p>{{request.place}}</p>
         <p>{{request.other}}</p>
@@ -54,7 +54,6 @@
       </section>
       {% endif %}
       {%endfor%}
-
   </div>
 </section>
   <!-- all your content here -->
