@@ -17,24 +17,24 @@
 <a id="View" href="/view">View</a>
 <a id="Buddies" href="/buddies">Buddies</a>
 
-  <p>Hello World</p>
-  {% for request in data %}
-    {% if user in request.buddies_users %}
+    <p>Hello World</p>
+    {% for request in data %}
+      {% if user in request.buddies_users %}
     <section class="showevents">
-    <p> {{request.activity}}: </p>
-    <p>{{request.time}}, {{request.date}}</p>
-    <p>{{request.place}}</p>
-    <p>{{request.other}}</p>
-    <p>buddies:</p>
-    {%for name in request.buddies%}
-      {{name}},
-    {% endfor %}
-   </br>
-  </section>
-  {% endif %}
-  {%endfor%}
-  <footer>
+      <p> {{request.activity}}: </p>
+      <p>{{request.time}}, {{request.date}}</p>
+      <p>{{request.place}}</p>
+      <p>{{request.other}}</p>
+      <p>buddies:</p>
+      {%for name in request.buddies%}
+        {{name}},
+      {% endfor %}
+    </br>
+    </section>
+    {% endif %}
+    {%endfor%}
+<footer>
     <p id="aboutbuddy" >&copy BuddyUp</p>
-  </footer>
+</footer>
 </body>
 <html>
