@@ -60,6 +60,7 @@ class buddyRequest(ndb.Model):
     other = ndb.StringProperty()
     buddies = ndb.StringProperty(repeated=True)
     creator = ndb.StringProperty(required=True)
+    date_created =  ndb.DateTimeProperty(required=True)
 
 
 
@@ -92,7 +93,8 @@ class CreateHandler(webapp2.RequestHandler):
                                            place = self.request.get("place"),
                                            other = self.request.get("other"),
                                            buddies = [],
-                                           creator = user.nickname()
+                                           creator = user.nickname(),
+                                           date_created = datetime.datetime.now()
                                            )
         buddyRequest_object.put()
 
@@ -104,6 +106,7 @@ class CreateHandler(webapp2.RequestHandler):
 class ViewHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
+
         query = buddyRequest.query()
         data = query.fetch()
 
@@ -111,6 +114,19 @@ class ViewHandler(webapp2.RequestHandler):
         self.response.write(template.render({'data':data,
                                             'user':user.nickname()
 
+                                            }))
+    def post(self):
+        request_id = buddyRequest.get_by_id(int(self.request.get("requestid")), parent=None)
+        request_id.key.delete()
+
+        user = users.get_current_user()
+
+        query = buddyRequest.query()
+        data = query.fetch()
+
+        template = jinja_environment.get_template('viewevents.html')
+        self.response.write(template.render({'data':data,
+                                            'user':user.nickname()
                                             }))
 
 
@@ -133,6 +149,9 @@ class AddyouselfHandler(webapp2.RequestHandler):
 
 
 
+
+
+
 jinja_environment = jinja2.Environment(loader =
     jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
@@ -141,7 +160,8 @@ app = webapp2.WSGIApplication([
     ('/homepage', HomePageHandler),
     ('/create', CreateHandler),
     ('/view', ViewHandler),
-    ('/add', AddyouselfHandler)
+    ('/add', AddyouselfHandler),
+
 
 
 
