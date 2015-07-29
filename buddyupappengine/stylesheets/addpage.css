@@ -1,14 +1,12 @@
 body {
   font-family: 'Orbitron', sans-serif;
-  background-repeat: no-repeat;
-  background-image: url("http://www.planwallpaper.com/static/images/bicycle-1280x720.jpg");
-  background-size: cover;
   text-align: center;
-  color: #0066FF;
+  background-color: #FFA347;
+  color: white;
 }
 
 h1 {
-  color: #0066FF;
+  color: white;
 }
 
 #firstnamebox {
@@ -35,9 +33,13 @@ h1 {
   font-size: 3em;
   font-family: monospace;
   display: block;
-  border: 2px solid red;
+  border: 2px solid white;
   border-radius: 200px;
   margin-top: 10%;
   font-family: 'Orbitron', sans-serif;
-  color: #0066FF;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
