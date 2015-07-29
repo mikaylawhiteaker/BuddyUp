@@ -12,7 +12,7 @@ body {
 }
 
 h1{
-  color:#A9853A;
+  color: black;
   text-align: center;
   font-size: 7em;
   font-family: monospace;
@@ -35,7 +35,7 @@ h1{
 }
 
 #aboutbuddy {
-  color:#2753CA;
+  color:black;
   padding-top: 50px;
   text-align: center;
 }
