@@ -7,7 +7,7 @@ body {
 
 h1 {
   text-align: center;
-  font-family: 'Orbitron', sans-serif;
+  font-family: monospace;
   font-weight: bold;
   color: white;
   font-size: 80px;
@@ -29,7 +29,7 @@ form{
 
     margin-top: 10%;
     margin-bottom: 10%;
-    font-family: Orbitron;
+    font-family: monospace;
     font-size: 1em;
     padding: 30px;
     border-radius: 30px;
