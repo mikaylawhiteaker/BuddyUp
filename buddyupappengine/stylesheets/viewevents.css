@@ -44,20 +44,18 @@
 }
 h1 {
   text-align: center;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 3em;
+  font-family: monospace;
+  font-size: 4em;
+  color: orange;
+  text-shadow: 2px 2px #FF9808
 }
 
-h3 {
-  text-align: center;
-  font-family: 'Orbitron', sans-serif;
-}
 
 body {
   background-color: #12CCB9;
   background-size: cover;
 
-  font-family: 'Orbitron', sans-serif;
+  font-family: monospace;
   color: white;
 
   font-size: 1.2em;
