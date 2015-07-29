@@ -140,7 +140,9 @@ class AddyouselfHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template('buddyadded.html')
         self.response.write(template.render({}))
 
-#class BuddieslistHandler(webapp2.RequestHandler):
+class BuddieslistHandler(webapp2.RequestHandler):
+    def get(self):
+        return True
 
 
 
