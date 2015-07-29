@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   $("#logo").mouseenter(function(){
-    $("#logo").css({"font-size": "20px", "color": "#00ff00"})
+    $("#logo").css({"font-size": "20px", "color": "#FA1423"})
 });
 
       $("#logo").mouseleave(function(){
