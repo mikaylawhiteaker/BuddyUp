@@ -37,7 +37,7 @@
 #logout_url {
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
-  margin-left: 12%;
+  margin-left: 10%;
   color: white;
   font-size: 17px;
   position: absolute;
@@ -103,7 +103,7 @@ p {
 
 
 #aboutbuddy {
-  margin-top: 80%;
+  margin-top: 40px;
   text-align: center;
   font-family: Times;
   font-size: 0.8em;

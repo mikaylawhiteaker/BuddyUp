@@ -1,5 +1,5 @@
 body {
-  font-family: 'Orbitron', sans-serif;
+  font-family: monospace;
   background-color: #19D175;
 }
 
@@ -23,13 +23,11 @@ a {
   display: block;
   border: 2px solid white;
   border-radius: 300px;
-  margin-top: 10%;
-  font-family: 'Orbitron', sans-serif;
+  margin-top: 11.5%;
   padding-left: 7%;
   padding-top: 3%;
   padding-bottom: 3%;
   padding-right: 7%;
-  margin-top: 6%;
 }
 
 #View {
@@ -38,12 +36,10 @@ a {
   margin-right: 25%;
   text-align: center;
   font-size: 7em;
-  font-family: monospace;
   display: block;
   border: 2px solid white;
   border-radius: 100px;
   margin-top: 5%;
-  font-family: 'Orbitron', sans-serif;
   padding-left: 7%;
   padding-top: 3%;
   padding-bottom: 3%;
@@ -81,7 +77,7 @@ a {
 
 
 #aboutbuddy {
-  padding-top: 50px;
+  margin-top: 11.5%;
   text-align: center;
   font-family: Times;
   font-size: 0.8em;
