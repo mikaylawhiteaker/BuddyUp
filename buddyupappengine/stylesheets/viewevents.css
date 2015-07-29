@@ -82,6 +82,7 @@ p {
   padding: 40px;
   margin-top: 60px;
   font-size: 1.3em;
+  word-wrap: break-word;
 }
 
 
@@ -126,4 +127,12 @@ footer {
   text-align: center;
   font-size: 1.7em;
   color: black;
+}
+
+
+#google {
+  display: block;
+  margin-left: 72%;
+  align-content: center;
+  margin-top: -3%;
 }
