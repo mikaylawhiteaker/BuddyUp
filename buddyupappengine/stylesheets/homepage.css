@@ -19,7 +19,6 @@ a {
   margin-right: 25%;
   text-align: center;
   font-size: 6em;
-  font-family: monospace;
   display: block;
   border: 2px solid white;
   border-radius: 300px;
@@ -35,10 +34,10 @@ a {
   margin-left: 25%;
   margin-right: 25%;
   text-align: center;
-  font-size: 7em;
+  font-size: 6em;
   display: block;
   border: 2px solid white;
-  border-radius: 100px;
+  border-radius: 300px;
   margin-top: 5%;
   padding-left: 7%;
   padding-top: 3%;
