@@ -13,10 +13,6 @@
     <a id="logout_url" href="{{logout}}" action = "/titlepage">Sign Out</a>
   </nav>
 
-<a id="Create" href="/create">Buddy Up!</a>
-<a id="View" href="/view">View</a>
-<a id="Buddies" href="/buddies">Buddies</a>
-
     <p>Hello World</p>
     {% for request in data %}
       {% if user in request.buddies_users %}
