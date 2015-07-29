@@ -27,6 +27,7 @@
   <h3>Your Buddy Requests</h3>
 
       {% for request in data %}
+        {% if request.creator == user %}
         <section class="showevents">
         <p> {{request.activity}}: </p>
         <p>{{request.time}}, {{request.date}}</p>
@@ -35,7 +36,7 @@
         <p>buddies:</p>
         {%for name in request.buddies%}
           {{name}},
-        {%endfor%}
+        {% endfor %}
         </br>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <div class="g-plus"
@@ -45,6 +46,7 @@
              data-href = "https://buddyup-1020.appspot.com/add?requestid={{request.key.id()}}"></div>
        </br>
      </section>
+      {% endif %}
       {%endfor%}
 
   </div>

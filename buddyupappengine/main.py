@@ -59,6 +59,7 @@ class buddyRequest(ndb.Model):
     place = ndb.StringProperty(required=True)
     other = ndb.StringProperty()
     buddies = ndb.StringProperty(repeated=True)
+    creator = ndb.StringProperty(required=True)
 
 
 
@@ -84,13 +85,14 @@ class CreateHandler(webapp2.RequestHandler):
         date = str(date_js)
 
 
-
+        user = users.get_current_user()
         buddyRequest_object = buddyRequest(activity = self.request.get("activity"),
                                            time = self.request.get("time"),
                                            date = date,
                                            place = self.request.get("place"),
                                            other = self.request.get("other"),
-                                           buddies = ['mikayla', 'sonia'],
+                                           buddies = [],
+                                           creator = user.nickname()
                                            )
         buddyRequest_object.put()
 
@@ -104,7 +106,7 @@ class ViewHandler(webapp2.RequestHandler):
         user = users.get_current_user()
         query = buddyRequest.query()
         data = query.fetch()
-        logging.info(data[0].key.id())
+        
 
 
         template = jinja_environment.get_template('viewevents.html')
