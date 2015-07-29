@@ -31,7 +31,7 @@
 h1 {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  font-size: 4em;
+  font-size: 3em;
 }
 
 h3 {
@@ -42,8 +42,10 @@ h3 {
 body {
   background-color: #12CCB9;
   background-size: cover;
+
   font-family: 'Orbitron', sans-serif;
   color: white;
+
   font-size: 1.2em;
 
   font-weight: 900;
@@ -63,12 +65,12 @@ p {
 
 
 .showevents {
-
-  border-top: 7px solid black;
-  border-bottom: 7px  solid black;
+  border-top: 6px solid black;
+  border-bottom: 6px  solid black;
   border-radius: 90px;
   padding: 40px;
   margin-top: 60px;
+  font-size: 1.3em;
 }
 
 
@@ -84,7 +86,6 @@ p {
 	right:1px;
 	background: url('http://png-2.findicons.com/files/icons/2338/reflection/128/arrow_up_1.png') no-repeat 0px 10px;
 }
-
 
 
 #aboutbuddy {

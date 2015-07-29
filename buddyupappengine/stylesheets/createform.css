@@ -1,5 +1,6 @@
 body {
-  background: url("http://www.planwallpaper.com/static/images/bicycle-1280x720.jpg") no-repeat fixed center;
+  /*background: url("http://www.planwallpaper.com/static/images/bicycle-1280x720.jpg") no-repeat fixed center;*/
+  background-color: #32B8ED;
   background-size: cover;
 }
 
@@ -8,7 +9,7 @@ h1 {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
-  color: red;
+  color: white;
   font-size: 80px;
   margin-bottom: -6%;
 }
@@ -17,13 +18,14 @@ h1 {
 div.form{
     display: block;
     text-align: center;
+    color: black;
 }
 form{
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    background-color: #FF0000;
+    background-color: white;
 
     margin-top: 10%;
     margin-bottom: 10%;
@@ -44,6 +46,8 @@ box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 
 .button {
   padding-left: 65%;
+  color: black;
+
 }
 
 nav {
@@ -54,25 +58,28 @@ nav {
   margin-right: 10%;
   font-weight: bold;
   font-family: 'Orbitron', sans-serif;
-  color: red;
+  color: white;
   text-decoration: none;
+  font-size: 17px;
 }
 
 #name {
-  margin-left: 63%;
+  margin-left: 55%;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
-  color: red;
+  color: white;
+  font-size: 17px;
 }
 
 #logout_url {
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
   margin-left: 2%;
-  color: red;
+  color: white;
+  font-size: 17px;
 }
 
 a {
   text-decoration: none;
-  color: red;
+  color: white;
 }
