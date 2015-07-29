@@ -130,10 +130,17 @@ class ViewHandler(webapp2.RequestHandler):
                                             }))
 
 
+class AddsignIn(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_environment.get_template('titlepage.html')
+        user = users.get_current_user()
+        greeting = users.create_login_url('/add?requestid='+self.request.get('requestid'))
+        self.response.write(template.render({"greeting":greeting}))
+
+
 class AddyouselfHandler(webapp2.RequestHandler):
     def get(self):
         requestid = int(self.request.get('requestid'))
-
         template = jinja_environment.get_template('addpage.html')
         self.response.write(template.render({"requestid":requestid,
 
@@ -161,6 +168,7 @@ app = webapp2.WSGIApplication([
     ('/create', CreateHandler),
     ('/view', ViewHandler),
     ('/add', AddyouselfHandler),
+    ('/addsignin', AddsignIn)
 
 
 
