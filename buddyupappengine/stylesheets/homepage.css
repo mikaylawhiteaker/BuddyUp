@@ -1,46 +1,55 @@
 body {
   font-family: 'Orbitron', sans-serif;
-  background-repeat: no-repeat;
-  background-image: url("https://c1.staticflickr.com/9/8426/7717053328_2133a0c0d3_z.jpg");
-  background-size: cover;
+  background-color: #19D175;
 }
 
 nav {
-  font-size: 12px;
+  font-size: 17px;
+  color: white;
 }
 
-h1{
-  color: red;
+a {
+  text-decoration: none;
+  color: white;
 }
 
 #Create {
-  color: black;
+  color: white;
   text-decoration: none;
   margin-left: 25%;
   margin-right: 25%;
   text-align: center;
-  font-size: 3em;
+  font-size: 7em;
   font-family: monospace;
   display: block;
-  border: 2px solid black;
-  border-radius: 100px;
+  border: 2px solid white;
+  border-radius: 300px;
   margin-top: 10%;
   font-family: 'Orbitron', sans-serif;
+  padding-left: 7%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-right: 7%;
+  margin-top: 6%;
 }
 
 #View {
-  color: black;
+  color: white;
   text-decoration: none;
   margin-left: 25%;
   margin-right: 25%;
   text-align: center;
-  font-size: 3em;
+  font-size: 7em;
   font-family: monospace;
   display: block;
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 100px;
   margin-top: 5%;
   font-family: 'Orbitron', sans-serif;
+  padding-left: 7%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-right: 7%;
 }
 
 #logo {
@@ -50,7 +59,7 @@ h1{
 }
 
 #name {
-  margin-left: 55%;
+  margin-left: 45%;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
 }
@@ -59,17 +68,4 @@ h1{
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
   margin-left: 2%;
-}
-
-h1 {
-  text-align: center;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
-  color: black;
-  font-size: 70px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
 }
