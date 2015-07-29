@@ -1,3 +1,55 @@
 body {
-  background-color: ##FF6600;
+  background-color: #FF7519;
+  color: white;
+}
+
+footer {
+  text-align: center;
+}
+
+nav {
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#logo {
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 17px;
+  position: absolute;
+  padding: 3px;
+}
+
+#name {
+  margin-left: 60%;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 17px;
+  position: relative;
+}
+
+#logout_url {
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  margin-left: 10%;
+  color: white;
+  font-size: 17px;
+  position: absolute;
+}
+
+#aboutbuddy {
+  margin-top: 11.5%;
+  text-align: center;
+  font-family: Times;
+  font-size: 0.8em;
+  margin-top: 9%;
 }
