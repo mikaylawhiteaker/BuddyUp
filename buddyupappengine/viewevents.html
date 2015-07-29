@@ -25,6 +25,7 @@
 
 
   <h1>Your Buddy Requests</h1>
+  <p>share on G+ to notify your buddies</p>
 
       {% for request in data %}
         {% if request.creator == user %}
@@ -44,6 +45,7 @@
              data-width="400"
              data-height="24"
              data-href = "https://buddyup-1020.appspot.com/add?requestid={{request.key.id()}}"></div>
+       </br>
        </br>
        <form action="/view" method="post">
          <input type="hidden" value="{{request.key.id()}}" name = "requestid">

@@ -126,7 +126,7 @@ class ViewHandler(webapp2.RequestHandler):
 
         template = jinja_environment.get_template('viewevents.html')
         self.response.write(template.render({'data':data,
-                                            'user':user.nickname()
+                                             'user':user.nickname()
                                             }))
 
 
