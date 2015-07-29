@@ -69,3 +69,12 @@ a {
   font-family: 'Orbitron', sans-serif;
   margin-left: 2%;
 }
+
+
+
+#aboutbuddy {
+  padding-top: 50px;
+  text-align: center;
+  font-family: Times;
+  font-size: 0.8em;
+}
