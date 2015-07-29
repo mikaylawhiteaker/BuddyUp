@@ -27,27 +27,20 @@ import datetime
 class HomePageHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('homepage.html')
-
         user = users.get_current_user()
-
         if user:
             logout =  users.create_logout_url('/')
             self.response.write(template.render({"logout":logout,
                                                  "user": user,
                                                 }))
-
         else:
             self.response.write("you are signed out")
 
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-
         template = jinja_environment.get_template('titlepage.html')
-
-
         user = users.get_current_user()
-
         greeting = users.create_login_url('/homepage')
         self.response.write(template.render({"greeting":greeting}))
 
@@ -59,6 +52,7 @@ class buddyRequest(ndb.Model):
     place = ndb.StringProperty(required=True)
     other = ndb.StringProperty()
     buddies = ndb.StringProperty(repeated=True)
+    buddies_users = ndb.StringProperty(repeated=True)
     creator = ndb.StringProperty(required=True)
     date_created =  ndb.DateTimeProperty(required=True)
 
@@ -74,18 +68,13 @@ class CreateHandler(webapp2.RequestHandler):
             self.response.write(template.render({"logout":logout,
                                                  "user": user,
                                                 }))
-
         else:
             self.response.write("you are signed out")
 
 
     def post(self):
         date_js = self.request.get("date")
-        # date = datetime.datetime.fromtimestamp(date_js/1000)
-
         date = str(date_js)
-
-
         user = users.get_current_user()
         buddyRequest_object = buddyRequest(activity = self.request.get("activity"),
                                            time = self.request.get("time"),
@@ -93,37 +82,30 @@ class CreateHandler(webapp2.RequestHandler):
                                            place = self.request.get("place"),
                                            other = self.request.get("other"),
                                            buddies = [],
+                                           buddies_users = [],
                                            creator = user.nickname(),
                                            date_created = datetime.datetime.now()
                                            )
         buddyRequest_object.put()
-
-
-
         self.redirect('/view')
 
 
 class ViewHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
-
         query = buddyRequest.query()
         data = query.fetch()
-
         template = jinja_environment.get_template('viewevents.html')
         self.response.write(template.render({'data':data,
-                                            'user':user.nickname()
+                                             'user':user.nickname()
 
                                             }))
     def post(self):
         request_id = buddyRequest.get_by_id(int(self.request.get("requestid")), parent=None)
         request_id.key.delete()
-
         user = users.get_current_user()
-
         query = buddyRequest.query()
         data = query.fetch()
-
         template = jinja_environment.get_template('viewevents.html')
         self.response.write(template.render({'data':data,
                                              'user':user.nickname()
@@ -140,17 +122,25 @@ class AddsignIn(webapp2.RequestHandler):
 
 class AddyouselfHandler(webapp2.RequestHandler):
     def get(self):
-        requestid = int(self.request.get('requestid'))
         template = jinja_environment.get_template('addpage.html')
-        self.response.write(template.render({"requestid":requestid,
 
+        current_user = users.get_current_user()
+        requestid = int(self.request.get('requestid'))
+        buddy_request = buddyRequest.get_by_id(requestid, parent=None)
+        self.response.write(template.render({"requestid":requestid,
+                                             "current_user":current_user.nickname(),
+                                             "buddy_request":buddy_request,
                                             }))
     def post(self):
+        current_user = users.get_current_user()
         buddy_request = buddyRequest.get_by_id(int(self.request.get("requestid")), parent=None)
         buddy_request.buddies.append(self.request.get('fname'))
+        buddy_request.buddies_users.append(current_user.nickname())
         buddy_request.put()
         template = jinja_environment.get_template('buddyadded.html')
         self.response.write(template.render({}))
+
+#class BuddieslistHandler(webapp2.RequestHandler):
 
 
 

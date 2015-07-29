@@ -6,10 +6,26 @@
     <title> BuddyUp! </title> 
   </head>
   <body>
+    <div class="top">
+    <nav>
+      <nav>
+        <span id="name">User: {{current_user}}</span>
+    </nav>
+    </div>
     <h1>Buddy Up!</h1>
+    <p> {{buddy_request.activity}}: </p>
+    <p>{{buddy_request.time}}, {{buddy_request.date}}</p>
+    <p>{{buddy_request.place}}</p>
+    <p>{{buddy_request.other}}</p>
+    <p>other buddies:</p>
+    {%for name in buddy_request.buddies%}
+      {{name}},
+    {% endfor %}
+
   <form class="box" action = "/add" method="post">
     Your Name: <input type="text" name="fname">
     <input type="hidden" name="requestid" value={{requestid}}>
+    <input type="hidden" name="current_user" value={{current_user}}>
     <button type="submit"> Add Yourself</button>
   </form>
   </body> 
