@@ -63,3 +63,10 @@ a {
   font-size: 1.3em;
   text-align: center;
 }
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 5em;
+  font-family: 'Orbitron', sans-serif;
+}
