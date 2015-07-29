@@ -47,4 +47,20 @@ $(document).ready(function(){
       $("#logout_url").mouseleave(function(){
         $("#logout_url").css({"font-size": "100%", "color": "white"})
       });
+
+      $('#Buddies').mouseenter(function(){
+        $("#Buddies").stop(true);
+        $('#Buddies').animate({"padding-top": "5%",
+        'padding-bottom': '5%',
+        'padding-left': '7%',
+        'padding-right': '7%'}, {duration: 800})
+      });
+
+      $('#Buddies').mouseleave(function(){
+        $("#Buddies").stop(true);
+        $('#Buddies').animate({"padding-top": "2%",
+        'padding-bottom': '2%',
+        'padding-left': '4%',
+        'padding-right': '4%'}, {duration: 800})
+      });
 });
