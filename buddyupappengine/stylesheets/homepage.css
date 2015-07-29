@@ -19,15 +19,14 @@ a {
   margin-right: 25%;
   text-align: center;
   font-size: 6em;
-  font-family: monospace;
   display: block;
   border: 2px solid white;
   border-radius: 300px;
   margin-top: 11.5%;
-  padding-left: 7%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-right: 7%;
+  padding-left: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 4%;
 }
 
 #View {
@@ -35,15 +34,15 @@ a {
   margin-left: 25%;
   margin-right: 25%;
   text-align: center;
-  font-size: 7em;
+  font-size: 6em;
   display: block;
   border: 2px solid white;
-  border-radius: 100px;
+  border-radius: 300px;
   margin-top: 5%;
-  padding-left: 7%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  padding-right: 7%;
+  padding-left: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 4%;
 }
 
 #logo {
