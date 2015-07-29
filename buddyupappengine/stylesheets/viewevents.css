@@ -110,3 +110,8 @@ p {
 nav {
   font-size: 17px;
 }
+
+footer {
+  text-align: center;
+  color: black;
+}

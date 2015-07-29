@@ -30,11 +30,10 @@ h1{
   display: block;
   border: 2px solid white;
   border-radius: 100px;
-
+  margin-bottom: 1%;
 }
 
 #aboutbuddy {
   color:black;
-  padding-top: 50px;
   text-align: center;
 }

@@ -31,8 +31,10 @@ form{
     margin-bottom: 10%;
     font-family: monospace;
     font-size: 1em;
-    padding: 30px;
+    padding: 28px;
     border-radius: 30px;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
 }
 
 
@@ -86,4 +88,8 @@ nav {
 a {
   text-decoration: none;
   color: white;
+}
+
+footer {
+  text-align: center;
 }
