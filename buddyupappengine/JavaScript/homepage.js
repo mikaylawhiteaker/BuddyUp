@@ -9,31 +9,35 @@ $(document).ready(function(){
       });
 
   $('#Create').mouseenter(function(){
-    $('#Create').css({"padding-top": "5%",
+    $("#Create").stop(true);
+    $('#Create').animate({"padding-top": "5%",
     'padding-bottom': '5%',
     'padding-left': '7%',
-    'padding-right': '7%'})
+    'padding-right': '7%'}, {duration: 800})
   });
 
   $('#Create').mouseleave(function(){
-    $('#Create').css({"padding-top": "2%",
+    $("#Create").stop(true);
+    $('#Create').animate({"padding-top": "2%",
     'padding-bottom': '2%',
     'padding-left': '4%',
-    'padding-right': '4%'})
+    'padding-right': '4%'}, {duration: 800})
   });
 
   $('#View').mouseenter(function(){
-    $('#View').css({"padding-top": "5%",
+    $("#View").stop(true);
+    $('#View').animate({"padding-top": "5%",
     'padding-bottom': '5%',
     'padding-left': '7%',
-    'padding-right': '7%'})
+    'padding-right': '7%'}, {duration:800})
   });
 
   $('#View').mouseleave(function(){
-    $('#View').css({"padding-top": "2%",
+    $("#View").stop(true);
+    $('#View').animate({"padding-top": "2%",
     'padding-bottom': '2%',
     'padding-left': '4%',
-    'padding-right': '4%'})
+    'padding-right': '4%'}, {duration:800})
   });
 
   $("#logout_url").mouseenter(function(){
