@@ -2,15 +2,30 @@
   margin-right: 20%;
   font-family: 'Orbitron', sans-serif;
 }
+.top{
+  font-size: 1em;
+  margin-right: 0%;
+}
+
+.button{
+  text-decoration: none;
+  color: white;
+}
+
+#bottom{
+  padding-right: 23%;
+  padding-left: 23%;
+}
 
 #name {
   margin-right: 10%;
-  margin-left: 35%;
+  margin-left: 55%;
   font-family: 'Orbitron', sans-serif;
 }
 #logout_url {
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
+  color: white;
 }
 
 h1 {
@@ -25,13 +40,14 @@ h3 {
 }
 
 body {
-  background: url("http://thecustomizewindows.com/wp-content/uploads/2012/01/Colorful-Android-Club.jpg")no-repeat fixed center;
+  background-color: #12CCB9;
   background-size: cover;
-  font-family: 'Montserrat', sans-serif;
-  color: #D41923;
+
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+
   font-size: 1.2em;
-  padding-right: 23%;
-  padding-left: 23%;
+
   font-weight: 900;
 
 }
@@ -61,7 +77,7 @@ p {
 .scrollToTop{
 	width:100px;
 	height:130px;
-	padding:10px;
+	padding:5px;
 	text-align:center;
   text-decoration: none;
 	color: #444;
