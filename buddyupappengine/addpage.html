@@ -6,10 +6,13 @@
     <title> BuddyUp! </title> 
   </head>
   <body>
+    <nav>
+      <span id="logo"><a href='http://localhost:15080/'>Buddy Up!</a></span>
+    </nav>
     <h1>Buddy Up!</h1>
   <form class="box">
-    First name: <input type="text" name="fname">
-    Last name: <input type="text" name="lname">
+    First name: <input id="firstnamebox" type="text" name="fname">
+    <br/>
     <input type="hidden" name="requestid" value={{requestid}} >
     <button type="submit"> Add Yourself</button>
   </form>

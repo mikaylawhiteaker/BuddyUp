@@ -7,17 +7,14 @@ body {
 
 h1 {
   color: white;
+  padding-top: 5%;
 }
 
 #firstnamebox {
   margin-right: 2%;
   width: 150px;
-  height: 15px;
-}
-
-#lastnamebox {
-  width: 150px;
-  height: 15px;
+  height: 20px;
+  padding-top: 2px;
 }
 
 #submitbutton {
@@ -35,11 +32,22 @@ h1 {
   display: block;
   border: 2px solid white;
   border-radius: 200px;
-  margin-top: 10%;
+  margin-top: 5%;
   font-family: 'Orbitron', sans-serif;
   color: white;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+nav {
+  font-size: 17px;
+  color: white;
+  margin-right: 92%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
