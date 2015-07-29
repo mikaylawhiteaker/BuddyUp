@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   $("#logo").mouseenter(function(){
-    $("#logo").css({"font-size": "225%", "color": "#FF0303"})
+    $("#logo").css({"font-size": "150%", "color": "#FF0303"})
 });
 
       $("#logo").mouseleave(function(){
@@ -9,7 +9,7 @@ $(document).ready(function(){
       });
 
   $("#logout_url").mouseenter(function(){
-    $("#logout_url").css({"font-size": "210%", "color": "#FF0303"})
+    $("#logout_url").css({"font-size": "150%", "color": "#FF0303"})
   });
 
       $("#logout_url").mouseleave(function(){
