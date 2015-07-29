@@ -35,4 +35,12 @@ $(document).ready(function(){
     'padding-left': '4%',
     'padding-right': '4%'})
   });
+
+  $("#logout_url").mouseenter(function(){
+    $("#logout_url").css({"font-size": "220%", "color": "#FA1423"})
+  });
+
+      $("#logout_url").mouseleave(function(){
+        $("#logout_url").css({"font-size": "100%", "color": "white"})
+      });
 });
