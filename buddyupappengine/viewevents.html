@@ -10,21 +10,20 @@
 </head>
 <body>
 
-
+  <div class="top">
   <nav>
-    <a href="/homepage" class ="button">Back</a>
+    <a href="/homepage" class ="button">BuddyUp</a>
     <span id="name">User: {{user}}</span>
-    <a id="logout_url" href="{{logout}}" action = "/titlepage">Sign Out</a>
+    <a id="logout_url" href='/'>Sign Out</a>
   </nav>
+  </div>
 
 
-
+  <section id = "bottom">
   <h1>Buddy Up!</h1>
 
-  <h3>View Events</h3>
 
-  <h3>View Buddy Requests</h3>
-      <p>Buddy Requests</p>
+  <h3>Your Buddy Requests</h3>
       {% for request in data %}
         <section class="showevents">
         <p> {{request.activity}}: </p>
@@ -47,10 +46,10 @@
       {%endfor%}
 
   </div>
-
+</section>
   <!-- all your content here -->
 
-<a href="#" class="scrollToTop">Top</a>
+
 
 	<!-- link to scripts here -->
 
