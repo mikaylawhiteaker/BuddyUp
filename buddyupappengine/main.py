@@ -54,7 +54,7 @@ class buddyRequest(ndb.Model):
     buddies = ndb.StringProperty(repeated=True)
     buddies_users = ndb.StringProperty(repeated=True)
     creator = ndb.StringProperty(required=True)
-    date_created =  ndb.DateTimeProperty(required=True)
+    date_created =  ndb.DateTimeProperty()
 
 
 
@@ -142,7 +142,14 @@ class AddyouselfHandler(webapp2.RequestHandler):
 
 class BuddieslistHandler(webapp2.RequestHandler):
     def get(self):
-        return True
+        user = users.get_current_user()
+        query = buddyRequest.query()
+        data = query.fetch()
+        template = jinja_environment.get_template('buddies.html')
+        self.response.write(template.render({'data':data,
+                                             'user':user.nickname()
+
+                                            }))
 
 
 
@@ -160,7 +167,8 @@ app = webapp2.WSGIApplication([
     ('/create', CreateHandler),
     ('/view', ViewHandler),
     ('/add', AddyouselfHandler),
-    ('/addsignin', AddsignIn)
+    ('/addsignin', AddsignIn),
+    ('/buddies', BuddieslistHandler),
 
 
 
