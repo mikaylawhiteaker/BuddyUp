@@ -1,6 +1,12 @@
 body {
   background-color: #FF7519;
   color: white;
+  font-family: monospace;
+  font-size: 1.2em;
+  font-weight: 900;
+
+
+
 }
 
 footer {
@@ -17,6 +23,13 @@ a {
   text-decoration: none;
   color: white;
 }
+
+#bottom{
+  padding-right: 23%;
+  padding-left: 23%;
+}
+
+
 
 #logo {
   text-decoration: none;
@@ -61,12 +74,12 @@ a {
   padding: 40px;
   margin-top: 60px;
   font-size: 1.3em;
-  text-align: center;
+  word-wrap: break-word;
 }
 
 h1 {
   text-align: center;
   color: white;
   font-size: 5em;
-  font-family: 'Orbitron', sans-serif;
+  font-family: monospace;
 }
