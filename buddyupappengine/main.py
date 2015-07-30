@@ -141,12 +141,13 @@ class AddyouselfHandler(webapp2.RequestHandler):
                                             }))
     def post(self):
         current_user = users.get_current_user()
-        buddy_request = buddyRequest.get_by_id(int(self.request.get("requestid")), parent=None)
+        requestid = int(self.request.get('requestid'))
+        buddy_request = buddyRequest.get_by_id(requestid, parent=None)
         buddy_request.buddies.append(self.request.get('fname'))
         buddy_request.buddies_users.append(current_user.nickname())
         buddy_request.put()
         template = jinja_environment.get_template('buddyadded.html')
-        self.response.write(template.render({}))
+        self.response.write(template.render({"requestid":requestid}))
 
 class BuddieslistHandler(webapp2.RequestHandler):
     def get(self):
