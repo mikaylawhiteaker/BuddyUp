@@ -68,4 +68,14 @@ a {
   border: 2px solid;
   border-color: white;
   display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#link {
+  border: 2px solid;
+  border-color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
 }
