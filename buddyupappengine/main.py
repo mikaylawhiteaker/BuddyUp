@@ -156,6 +156,7 @@ class BuddieslistHandler(webapp2.RequestHandler):
 
         if user:
             query = buddyRequest.query()
+            query = query.order(-buddyRequest.date_created)
             data = query.fetch()
             logout =  users.create_logout_url('/')
             self.response.write(template.render({"logout":logout,
@@ -164,7 +165,6 @@ class BuddieslistHandler(webapp2.RequestHandler):
                                                 }))
         else:
             self.response.write("you are signed out")
-
 
 
 
