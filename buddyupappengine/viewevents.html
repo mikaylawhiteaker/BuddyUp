@@ -15,7 +15,7 @@
     <nav>
       <a href='/homepage'><span id="logo">Buddy Up</a></span>
       <span id="name">User: {{user}}</span>
-      <a id="logout_url" href='/'>Sign Out</a>
+      <a id="logout_url" href="{{logout}}" action = '/titlepage'>Sign Out</a>
   </nav>
   </div>
 
@@ -43,7 +43,7 @@
          <input type="hidden" value="{{request.key.id()}}" name = "requestid">
          <button type="submit">Delete Request</button>
       </form>
-    
+
       <div id="google"><script src="https://apis.google.com/js/platform.js" async defer></script>
       <div class="g-plus"
            data-action="share"

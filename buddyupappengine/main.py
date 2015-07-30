@@ -93,17 +93,21 @@ class CreateHandler(webapp2.RequestHandler):
 class ViewHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
-
-        query = buddyRequest.query()
-        query = query.order(-buddyRequest.date_created)
-        data = query.fetch()
-
-
         template = jinja_environment.get_template('viewevents.html')
-        self.response.write(template.render({'data':data,
-                                             'user':user.nickname()
 
-                                            }))
+        if user:
+            query = buddyRequest.query()
+            query = query.order(-buddyRequest.date_created)
+            data = query.fetch()
+            logout =  users.create_logout_url('/')
+            self.response.write(template.render({"logout":logout,
+                                                 'data':data,
+                                                 'user':user.nickname()
+                                                }))
+        else:
+            self.response.write("you are signed out")
+
+
     def post(self):
         request_id = buddyRequest.get_by_id(int(self.request.get("requestid")), parent=None)
         request_id.key.delete()
@@ -147,14 +151,19 @@ class AddyouselfHandler(webapp2.RequestHandler):
 class BuddieslistHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
-        query = buddyRequest.query()
-        data = query.fetch()
+
         template = jinja_environment.get_template('buddies.html')
-        self.response.write(template.render({'data':data,
-                                             'user':user.nickname()
 
-                                            }))
-
+        if user:
+            query = buddyRequest.query()
+            data = query.fetch()
+            logout =  users.create_logout_url('/')
+            self.response.write(template.render({"logout":logout,
+                                                 'data':data,
+                                                 'user':user.nickname()
+                                                }))
+        else:
+            self.response.write("you are signed out")
 
 
 
