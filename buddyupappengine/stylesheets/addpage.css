@@ -10,6 +10,10 @@ h1 {
   padding-top: 5%;
 }
 
+h3{
+  padding-bottom: 7%;
+}
+
 #firstnamebox {
   margin-right: 2%;
   width: 150px;
@@ -67,6 +71,7 @@ a {
   text-align: center;
   border: 2px solid;
   border-color: white;
+  border-radius: 100px;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 30%;
@@ -76,6 +81,7 @@ a {
 #link {
   border: 2px solid;
   border-color: blue;
+  border-radius: 100px;
   text-align: center;
   padding-right: 5%;
   padding-top: 1%;
@@ -84,5 +90,11 @@ a {
 }
 
 #facebook {
+  margin-left: 65%;
+  display: block;
+  margin-top: -7%;
+}
+#google{
   text-align: center;
+  display: block;
 }
