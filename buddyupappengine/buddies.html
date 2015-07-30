@@ -13,6 +13,8 @@
     <span id="name">User: {{user}}</span>
     <a id="logout_url" href="{{logout}}" action = "/titlepage">Sign Out</a>
   </nav>
+
+  <section id= "bottom">
   <h1>Buddies</h1>
     {% for request in data %}
       {% if user in request.buddies_users %}
@@ -29,6 +31,7 @@
     </section>
     {% endif %}
     {%endfor%}
+  </section>
 <footer>
     <p id="aboutbuddy" >&copy BuddyUp</p>
 </footer>
