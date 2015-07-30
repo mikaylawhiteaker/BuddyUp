@@ -3,6 +3,13 @@
   margin-right: 0%;
 }
 
+#facebook{
+  display: block;
+  margin-left: 72.7%;
+  align-content: center;
+  margin-top: 0%;
+}
+
 .button{
   text-decoration: none;
   color: white;
