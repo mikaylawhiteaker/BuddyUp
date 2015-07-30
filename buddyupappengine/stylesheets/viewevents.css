@@ -124,7 +124,7 @@ footer {
   color: white;
 }
 
-#instructions {
+.instructions {
   text-align: center;
   color: white;
   font-size: 1.4em;

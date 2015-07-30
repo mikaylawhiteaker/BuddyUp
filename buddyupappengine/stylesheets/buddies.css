@@ -81,6 +81,11 @@ h1 {
   font-family: monospace;
 }
 
+h2 {
+  text-align: center;
+  margin-top: -4.5%;
+}
+
 #activity {
   text-align: center;
   font-size: 1.8em;
