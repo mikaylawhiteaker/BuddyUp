@@ -19,7 +19,7 @@
   }(document, 'script', 'facebook-jssdk'));</script>
 
   <div class="top">
-  
+
     <nav>
       <a href='/homepage'><span id="logo">Buddy Up</a></span>
       <span id="name">User: {{user}}</span>
@@ -51,7 +51,7 @@
          <input type="hidden" value="{{request.key.id()}}" name = "requestid">
          <button type="submit">Delete Request</button>
       </form>
-    
+
       <div id="google"><script src="https://apis.google.com/js/platform.js" async defer></script>
       <div class="g-plus"
            data-action="share"
@@ -59,6 +59,7 @@
            data-height="24"
            data-href = "https://buddyup-1020.appspot.com/addsignin?requestid={{request.key.id()}}"></div>
          </div>
+       </br>
       <div id = "facebook" class="fb-share-button" data-href="https://buddyup-1020.appspot.com/addsignin?requestid={{request.key.id()}}" data-layout="button"></div>
 
       </section>
