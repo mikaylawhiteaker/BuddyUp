@@ -62,3 +62,10 @@ a {
   font-size: 12px;
   text-align: center;
 }
+
+#sharingbox {
+  text-align: center;
+  border: 2px solid;
+  border-color: white;
+  display: block;
+}
