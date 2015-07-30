@@ -10,7 +10,7 @@ $(document).ready(function(){
   $('#Signin').mouseleave(function(){
     $("#Signin").stop(true);
     $('#Signin').css({"padding-top": "0%",
-    'padding-bottom': '0%', "background-color": "#e5c100"})
+    'padding-bottom': '0%', "background-color": "#ffd700"})
   });
 
 
