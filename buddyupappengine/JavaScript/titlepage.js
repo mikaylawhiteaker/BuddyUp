@@ -3,8 +3,8 @@ $(document).ready(function(){
 
   $('#Signin').mouseenter(function(){
     $("#Signin").stop(true);
-    $('#Signin').animate({"padding-top": "0.8%",
-    'padding-bottom': '0.8%', "background-color": "black"}, {duration:420})
+    $('#Signin').animate({"padding-top": "0.7%",
+    'padding-bottom': '0.7%', "background-color": "black"}, {duration:420})
   });
 
   $('#Signin').mouseleave(function(){
