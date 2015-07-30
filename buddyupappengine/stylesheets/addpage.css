@@ -62,3 +62,8 @@ a {
   font-size: 12px;
   text-align: center;
 }
+
+#sharingbox {
+  margin-top: -5%;
+  padding-left: 12%;
+}
