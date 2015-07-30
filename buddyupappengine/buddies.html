@@ -19,7 +19,7 @@
     {% for request in data %}
       {% if user in request.buddies_users %}
     <section class="showevents">
-      <p id="activity"> {{request.activity}}: </p>
+      <div id="activity"> {{request.activity}}: </div>
       <p id="time_date">{{request.time}}, {{request.date}}</p>
       <p id="place">{{request.place}}</p>
       <p id="other">{{request.other}}</p>

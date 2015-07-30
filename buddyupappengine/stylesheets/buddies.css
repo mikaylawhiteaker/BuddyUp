@@ -4,9 +4,6 @@ body {
   font-family: monospace;
   font-size: 1.2em;
   font-weight: 900;
-
-
-
 }
 
 footer {
@@ -82,4 +79,10 @@ h1 {
   color: white;
   font-size: 5em;
   font-family: monospace;
+}
+
+#activity {
+  text-align: center;
+  font-size: 1.8em;
+  color: black;
 }

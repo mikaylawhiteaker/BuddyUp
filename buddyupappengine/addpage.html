@@ -22,7 +22,7 @@
     {% endfor %}
 
   <form class="box" action = "/add" method="post">
-    Your Name: <input type="text" name="fname">
+    Your Name: <input type="text" name="fname" required>
     <input type="hidden" name="requestid" value={{requestid}}>
     <input type="hidden" name="current_user" value={{current_user}}>
     <button type="submit"> Add Yourself</button>
