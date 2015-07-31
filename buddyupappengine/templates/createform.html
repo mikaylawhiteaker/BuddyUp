@@ -4,6 +4,7 @@
   <title>Buddy Up!-Create</title>
   <link href='http://fonts.googleapis.com/css?family=Orbitron:400' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="stylesheets/createform.css">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src ="JavaScript/createform.js"></script>
@@ -33,7 +34,7 @@
           </label>
           </br>
           <label>
-            Place<input type="text" name="place" required />
+            Place<input id="pac-input" class="controls" type="text" name="place" required /><div id="map-canvas"></div>
           </label>
           </br>
           <label>
@@ -47,6 +48,10 @@
 
       </form>
     </div>
+
+
+  
+
 
 <footer>
   <p id="aboutbuddy" >&copy BuddyUp</p>
