@@ -48,6 +48,7 @@
           {{name}},
         {% endfor %}
         </br>
+      </br>
        <form id="myform" action="/view" method="post">
          <input type="hidden" value="{{request.key.id()}}" name = "requestid">
          <button type="submit">Delete Request</button>

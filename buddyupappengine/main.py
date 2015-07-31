@@ -81,9 +81,9 @@ class CreateHandler(webapp2.RequestHandler):
                                            date = date,
                                            place = self.request.get("place"),
                                            other = self.request.get("other"),
-                                           buddies = [],
-                                           buddies_users = [],
                                            creator = user.nickname(),
+                                           buddies = [user.nickname()],
+                                           buddies_users = [],
                                            date_created = datetime.datetime.now()
                                            )
         buddyRequest_object.put()
@@ -97,7 +97,7 @@ class ViewHandler(webapp2.RequestHandler):
 
         if user:
             query = buddyRequest.query()
-            query = query.order(-buddyRequest.date_created)
+            query = query.order(-buddyRequest.date)
             data = query.fetch()
             logout =  users.create_logout_url('/')
             self.response.write(template.render({"logout":logout,
